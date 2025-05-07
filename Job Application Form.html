@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Application Form</title>
+</head>
+<body>
+  <h2>Application Form</h2>
+  <form action="/submit-form" method="POST" >
+
+    <p>Name</p>
+    <input type="text" name="first_name" placeholder="First"  minlength="2" maxlength="30">
+    <input type="text" name="last_name" placeholder="Last"  minlength="2" maxlength="30">
+
+    <p>Email</p>
+    <input type="email" name="email" placeholder="john.doe@example.com" required>
+
+    <p>What position are you applying for?</p>
+    <select name="position" required>
+      <option value="">- Select -</option>
+      <option value="developer">Developer</option>
+      <option value="designer">SalesForce</option>
+      <option value="manager">QA Engineer</option>
+    </select>
+
+
+
+    <p>What is your current employee status?</p>
+    <label><input type="radio" name="employment_status" value="employed" required> Employed</label>
+    <label><input type="radio" name="employment_status" value="self-employed"> Self-Employed</label>
+    <label><input type="radio" name="employment_status" value="unemployed"> Unemployed</label>
+    <label><input type="radio" name="employment_status" value="student"> Student</label>
+
+
+    <p>Please upload your resume</p>
+    <input type="file" name="resume_upload" accept=".pdf,.doc,.docx" required>
+
+    <p>Do you have references? </p>
+    <input type="text" name="ref_first_name" placeholder="First" minlength="2" maxlength="30">
+    <input type="text" name="ref_last_name" placeholder="Last" minlength="2" maxlength="30">
+
+    <p>Reference email</p>
+    <input type="email" name="ref_email" placeholder="someone@example.com">
+
+    <br><br>
+    <button type="reset">Reset</button>
+    <button type="submit">Apply</button>
+  </form>
+</body>
+</html>
